@@ -7,6 +7,7 @@ const SignedInLinks = () => {
         <ul className="right">
             <li><NavLink to='/'>New Patient</NavLink></li>
             <li><NavLink to='/'>New Visit</NavLink></li>
+            <li><NavLink to='/'>Schedule Appointment</NavLink></li>
             <li><NavLink to='/' className='btn btn-floating teal lighten-2'>NV</NavLink></li>
         </ul>
     );
