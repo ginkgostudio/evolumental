@@ -48,7 +48,7 @@ class CreateAccount extends Component {
                         <input type="text" id="profLicense" onChange={this.handleChange}></input>
                     </div>
 
-                    <button className="btn blue lightn-1 z-depth-0">Create Account</button>
+                    <button className="btn-large waves-effect blue darken-3 lightn-1 z-depth-0">Create Account</button>
                 </form>
             </div>
         )

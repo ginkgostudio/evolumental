@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Dashboard} />
           <Route path='/signin' component={SignIn} />
-          <Route path='/createaccount' component={CreateAccount} />
+          <Route path='/create' component={CreateAccount} />
         </Switch>
       </div>
     </BrowserRouter>
