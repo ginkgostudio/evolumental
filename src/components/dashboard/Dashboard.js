@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import UpcomingAppointments from '../appointments/UpcomingAppointments'
+import { connect } from 'react-redux'
 
 class Dashboard extends Component {
     render() {
+        const { appointmentProps } = this.props;
         return (
             <div className="dashboard container">
                 <div className="row">
                     <div className="col s12 m6">
-                        <UpcomingAppointments />
+                        <UpcomingAppointments appointments={appointmentProps} />
                     </div>
                     <div className="col s12 m5 offset-1">
                         
@@ -18,4 +20,10 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard
+const mapStateToProps = (state) => {
+    return {
+        appointmentProps: state.appointmentState.appointments
+    }
+}
+
+export default connect(mapStateToProps)(Dashboard)
