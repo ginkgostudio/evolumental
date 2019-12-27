@@ -1,13 +1,15 @@
 import React from 'react'
 import AppointmentSummary from './AppointmentSummary'
 
-const UpcomingAppointments = () => {
+// Recibo appointmentProps desde el Dashboard
+const UpcomingAppointments = ({appointments}) => {
     return (
         <div className="upcoming-appointments section">
-            <AppointmentSummary />
-            <AppointmentSummary />
-            <AppointmentSummary />
-            <AppointmentSummary />
+            { appointments && appointments.map(appointment => {
+                return (
+                   <AppointmentSummary appointment={ appointment } key={ appointment.id } />
+                )
+            })}
         </div>
     )
 }
